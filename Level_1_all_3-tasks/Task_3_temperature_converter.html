@@ -1,0 +1,52 @@
+<!doctype html>
+<html dir="ltr" lang="en" class>
+<head>
+	<meta charset="UTF-8">
+	<title>Temperature</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<!--custom css-->
+	<link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body class="we">
+    <section>
+    <div>
+        <h1>Temperature Converter</h1>
+        <p>Choose the unit which do you want to  convert</p>
+        <input id="number" type="number"></input>
+        <select id="option">
+            <option>Fahrenheit</option>
+            <option>Celsius</option>
+        </select>
+        <button id="submit">Convert</button>
+        <p id="result"></p>
+    </div>
+    </section>
+
+    <script type="text/javascript">
+        document.getElementById("submit").onclick = function(){
+            var number = document.getElementById("number").value;
+            var option = document.getElementById("option").value;
+            var result = document.getElementById("result");
+
+            if(option == "Fahrenheit"){
+                var c = ((number-32)*5)/9;
+                result.innerHTML = c.toFixed(2) +" "+ "ºC";
+            }
+
+            else{
+                var f = (9/5*(number))+32;
+                result.innerHTML = f.toFixed(2) + " "+ "ºF";
+            }
+        }
+
+    </script>
+
+	<footer>
+		<p>&copy; 2023 temprature converter . All rights reserved.</p>
+	</footer>
+	</body>
+		
+	</html>
